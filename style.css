@@ -1,0 +1,160 @@
+body {
+    font-family: -apple-system, BlinkMacSystemFont, sans-serif;
+  background-color: black;
+  color: white;
+  width: 100%;
+}
+
+.container {
+  display: flex;
+  justify-content: center;
+  align-items:center;
+  flex-direction: column;
+  height: 500px;
+  /* width: 400px; */
+  width: 50%;
+  margin: auto;
+}
+
+.result {
+  text-align: end;
+  font-size: 2em;
+  /* font-size: 4vw; */
+  /* width: 100%; */
+  /* overflow: hidden; */
+  /* text-overflow: ellipsis; */
+}
+
+.numbers {
+  display: grid;
+}
+
+.numbers>.number_1 {
+  grid-row: 4;
+  grid-column: 1;
+}
+
+.numbers>.number_2 {
+  grid-row: 4;
+  grid-column: 2;
+}
+
+.numbers>.number_3 {
+  grid-row: 4;
+  grid-column: 3;
+}
+
+.numbers>.number_4 {
+  grid-column: 1;
+  grid-row: 3;
+}
+
+.numbers>.number_5 {
+  grid-column: 2;
+  grid-row: 3;
+}
+
+.numbers>.number_6 {
+  grid-column: 3;
+  grid-row: 3;
+}
+
+.numbers>.number_7 {
+  grid-column: 1;
+  grid-row: 2;
+}
+
+.numbers>.number_8 {
+  grid-column: 2;
+  grid-row: 2;
+}
+
+.numbers>.number_9 {
+  grid-column: 3;
+  grid-row: 2;
+}
+
+.numbers>.number_0 {
+  grid-column: 1 / -3;
+  width: 120px;
+  grid-row: 5;
+}
+
+.numbers>.dot {
+  grid-column: 3;
+  grid-row: 5;
+}
+
+.dot {
+  width: 60px;
+  height: 50px;
+}
+
+.numbers>.equal {
+  grid-column: 4;
+  grid-row: 5;
+}
+
+/* .numbers>.add { */
+/*   grid-column: 4; */
+/*   grid-row: 4; */
+/* } */
+/**/
+/* .numbers>.minus { */
+/*   grid-column: 4; */
+/*   grid-row: 3; */
+/* } */
+
+/* .numbers>.multiply { */
+/*   grid-column: 4; */
+/*   grid-row: 2; */
+/* } */
+
+/* .numbers>.divide { */
+/*   grid-column: 4; */
+/*   grid-row: 1; */
+/* } */
+
+/* .numbers>.ac { */
+/*   grid-column: 1; */
+/*   grid-row: 1; */
+/* } */
+
+/* .numbers>.posneg { */
+/*   grid-column: 2; */
+/*   grid-row: 1; */
+/* } */
+
+/* .numbers>.percentage { */
+/*   grid-column: 3; */
+/*   grid-row: 1; */
+/* } */
+
+.numbers button {
+  height: 50px;
+  width: 60px;
+  margin: auto;
+  background-color: grey;
+  border-radius: 50px;
+  border-color: transparent;
+  color: white;
+  font-weight: 1000;
+  font-size: 25px;
+}
+
+.action {
+  background-color: darkgrey !important;
+  color: black !important;
+  font-weight: 500 !important;
+}
+
+.operand {
+  background-color: orange !important;
+}
+
+.equal {
+  background-color: orange !important;
+}
+
+
+
