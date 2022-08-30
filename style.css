@@ -14,15 +14,25 @@ body {
   /* width: 400px; */
   width: 50%;
   margin: auto;
+  /* border: 2px solid grey; */
+  border-radius: 5%;
+  background-color: black;
 }
 
 .result {
   text-align: end;
   font-size: 2em;
   /* font-size: 4vw; */
-  /* width: 100%; */
+  width: 90%;
+  /* border-radius: 10%; */
+  height: 50px;
+  text-align: center;
+  padding-top: 10px;
+  align-items: center;
+  margin: auto;
   /* overflow: hidden; */
   /* text-overflow: ellipsis; */
+  /* background-color: darkgreen; */
 }
 
 .numbers {
@@ -140,6 +150,11 @@ body {
   color: white;
   font-weight: 1000;
   font-size: 25px;
+}
+
+.numbers button:hover {
+  cursor: pointer;
+  background-color: rebeccapurple !important;
 }
 
 .action {
