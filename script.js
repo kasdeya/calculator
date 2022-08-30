@@ -34,18 +34,18 @@ function divide(num1,num2) {
   }
 };
 
-/* // operator */
-/* function operate(operator, num1, num2) { */
-/*   if (operator == '+') { */
-/*    return add(num1, num2); */
-/*   } else if (operator == '-') { */
-/*     return subtract(num1, num2); */
-/*   } else if (operator == '*') { */
-/*     return multiply(num1, num2); */
-/*   } else { */
-/*     return divide(num1, num2); */
-/*   }; */
-/* }; */
+// operator
+function operate(operator, num1, num2) {
+  if (operator == '+') {
+    return add(num1, num2);
+  } else if (operator == '-') {
+    return subtract(num1, num2);
+  } else if (operator == '*') {
+    return multiply(num1, num2);
+  } else {
+    return divide(num1, num2);
+  };
+};
 
 let operator = ''
 const operandButtons = document.querySelectorAll(".operand");
@@ -125,29 +125,62 @@ clearButton.addEventListener('click', () => {
 
 let res 
 let numLock = false
+let previousOperator = ''
+let secondNumber = ''
 
 operandButtons.forEach(operand => {
   operand.addEventListener('click', () => {
-
-  firstNumber += numPrinter
-
+    if (firstNumber == '') {
+  firstNumber = numPrinter
   numPrinter = ''
+    } else {
+  secondNumber = numPrinter
+  numPrinter = ''
+    }
   if (operand.innerText == '+') {
+      numLock = false
     operator = '+'
-      numLock = false
+       if (secondNumber != '') {     /*     res = operate(operator, firstNumber, secondNumber) */
+    /*     firstNumber = res.toString() */
+    /*     previousOperator = '+' */
+    /*     operator = '+' */
+    /*     console.log(res); */
+        chainOperation();   
+        /* return */ 
+     }
+      previousOperator = '+'
   } else if (operand.innerText == '-') {
-    operator = '-'
       numLock = false
+    operator = '-'
+      if (secondNumber != '') {
+      chainOperation();
+      }
+      previousOperator = '-'
   } else if (operand.innerText == 'x') {
     operator = 'x'
+      if (secondNumber != '') {
+      chainOperation();
+      }
       numLock = false
   } else if (operand.innerText == '/') {
       operator = '/'
+      if (secondNumber != '') {
+      chainOperation();
+      }
       numLock = false
     }
   })
 });
 
+function chainOperation() {
+      /* if (secondNumber != '') { */
+        res = operate(previousOperator, firstNumber, secondNumber)
+        firstNumber = res.toString()
+        /* operator  */
+        console.log(res);
+        /* return */
+    /* } */
+}
 
 equalButton.addEventListener('click', () => {
   if (firstNumber != '' && numPrinter != '') {
@@ -169,10 +202,10 @@ equalButton.addEventListener('click', () => {
     result.textContent = `${res}`
   }
     numPrinter = ''
-    firstNumber = res
+    firstNumber = res.toString()
     numLock = true;
-  } else {
-    return
+  /* } else { */
+    /* return */
   }
 })
 
